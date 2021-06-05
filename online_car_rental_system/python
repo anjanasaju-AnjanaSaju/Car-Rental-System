@@ -1,0 +1,6 @@
+Migrations for 'car_rental_system':
+  car_rental_system\migrations\0001_initial.py
+    - Create model car
+    - Create model CarBooking
+    - Create model Customer
+    - Create model Employee

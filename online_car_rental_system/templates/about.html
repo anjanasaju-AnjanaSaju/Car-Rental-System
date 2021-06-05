@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/icon z.png' %}" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+</head>
+<body>
+    <header class="abtheader">
+        <!-- navbar -->
+
+        
+            <div class="container-flex">
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top  scrolled" id="nav">
+                    <img width="50px" src="{% static 'images/icon z.png'%}" alt="images">
+                    <a class="navbar-brand" href="#"><b>ZOOM CAR</b></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">Book Your Car</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">Search Your Car</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'signup' %}">Register</a>
+                              </li>
+                              
+                              
+                              
+                            </ul>
+                        </div>
+                </nav>
+            </div>
+        <!-- <nav ends -->
+            <div class="contact-text text-white">
+                <style>
+                    .abtheader{
+                        background-image:url( "{% static 'images/about 2.jpg' %}");
+                    }
+                  
+                </style>
+                
+            </div>
+            </header>
+
+
+             <!-- mainbody section1 -->
+    <section id="cmainbody">
+        <div class="container-fluid p-4">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                  <h1 class="text-center"   style="color: black;"><b><b><b><b>ZOOM RENTAL CAR</b></b></b></b></h1>
+                  <p class="text-align: justify">Zoom Car is a free rent-a-car service brought forward by the house of Indus Motors. Indus motors has worked its way to becoming a household name among car dealerships in the country. It has maintained an exceptional sales tenure and has procured one of the top car dealership positions in India for more than a decade.
+                    Zoom Car is a prodigy of an outstanding service oriented model and stellar work ethic as exhibited by its parent company. Zoom Car is dedicated to provide a comfortable rent-a-car experience, making sure all your plans are carried out without an ounce of difficulty. With Zoom Car, our customers receive a range of facilities 
+                    like 24 hour assistance and flexible, dynamic pricing to begin with. Our vehicles are fully insured making sure to minimize risk during the course of your journey. We also provide pick up and drop facilities from all major airports in Kerala as well as convenient locations such as your home With a number of travellers passing 
+                    through our locations everyday, we have with us a large fleet of vehicles on offer to suit your needs - from premium luxury vehicles, smart executive sedans to SUVs and compact family hatchbacks. With extra seating, additional luggage space and numerous other options to choose from, we understand your desires at its root. or office
+                    doorstep. Our rentals can also be tailored to suit individual needs, ranging from daily, weekly or monthly car rentals. For long drives and weekend escapes, to family outings and work commutes, we are here. We encourage you to escape from the daily routines and take time out to travel and explore the country with us.
+                    ZOOM CAR strives to be part of the best in the industry and we make sure our service is incomparable. Customer convenience is of prime importance to us. Rent a car with Zoom Car and you’ll find a different story unfolds in every direction you drive. Celebrate the self-driven with Zoom Car.</p>
+                </div>
+                </div>
+                </div>
+                </section>
+                    <!-- mainbody2 -->
+    <section id="mainbody2">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-6 p-0">
+                  <img id="img2" class="img-fluid" src="{% static 'images/about.jpg'%}" />
+              </div>
+
+              <div class="col-md-6 text-center p-5">
+                  <div class="justify-content-center">
+                      <h3 id="hd"><b>WHY ZOOM CARS ?</b></h3>
+                      <p class="text-align: justify">We are a self-drive car rental agency, with offices in  Kerala. ZOOM CAR Group was founded in 2012. Today, we are dealers for 3 automotive brands with showrooms in Kochi ,Calicut and Wayanad. ZOOM CAR follows the same core values & principles built by the Indus Mottors group. Customer satisfaction is our top-most priority.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- mainbody2 end -->
+
+                <section id="why-zoom">
+                  <div class="container">
+
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="card mt-3" style="width: 15rem; text-align: justify">
+                            <img src="{% static 'images/flexible.png'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text text-align: justify"><b>Flexible Prices</b><br>Book hourly, daily, weekly or monthly. We have got you covered.</p>
+                            </div>
+                          </div>
+                      </div>
+            
+                      <div class="col-md-4">
+                        <div class="card mt-3" style="width: 15rem; text-align: justify">
+                          <img src="{% static 'images/hidden change.png'%}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text"><b>No Hidden Charges</b><br>Our prices include taxes & insurance. We have no hidden charges.</p>
+                          </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4">
+                      <div class="card mt-3" style="width: 15rem; text-align: justify">
+                        <img src="{% static 'images/security.png'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text"><b>Low Security Deposit</b><br>Now book a vehicle paying minimum security deposit.</p>
+                        </div>
+                      </div>
+                  </div>
+            
+                  <div class="col-md-4">
+                    <div class="card mt-4" style="width: 15rem; text-align: justify">
+                      <img src="{% static 'images/refund.png'%}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text"><b>Speedy Refund</b><br>As we are able to do it within 5 days only.</p>
+                      </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4">
+                  <div class="card mt-4" style="width: 15rem; text-align: justify">
+                    <img src="{% static 'images/goanyway.png'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text"><b>Go Anywhere</b><br>All your bookings include damage insurance. So you can enjoy your ride without worries.</p>
+                    </div>
+                  </div>
+              </div>
+            
+              <div class="col-md-4">
+                <div class="card" style="width: 15rem; text-align: justify">
+                  <img src="{% static 'images/assistance.png'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text"><b>24x7 Roadside Assistance</b><br>We offer round the clock roadside assistance. Help is always near to you</p>
+                  </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </section>
+            
+                <!-- row 1 ends-->
+            
+            
+                  
+                <!-- row 2  start-->
+                <section id="how-zoom">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-12 my-5">
+                              <h2 class="text-center"style="color:black"><b><b>HOW ZOOM CAR WORKS</b></b></h2>
+                              <p class="pt-3 mx-5">Drive yourself to an adventure and back in 6 simple steps...................</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="card mt-3" style="width: 15rem; text-align: justify">
+                            <img src="{% static 'images/search.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text"><b>Search and Book</b><br>Search for your dream and pick up from one and book your dream</p>
+                            </div>
+                          </div>
+                      </div>
+            
+                      <div class="col-md-4">
+                        <div class="card mt-3" style="width: 15rem; text-align: justify">
+                          <img src="{% static 'images/unlock.jpg'%}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text"><b>Unlock</b><br>We SMS your car details 20 minutes before pickup Unlock it via the Zoomcar app.</p>
+                          </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4">
+                      <div class="card mt-3" style="width: 15rem; text-align: justify">
+                        <img src="{% static 'images/car.jpg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text"><b>Pick Up your Car</b><br>Ride from home or from any of our conveniently located sites around your city. We even offer pickup & drop off at airports too</p>
+                        </div>
+                      </div>
+                  </div>
+            
+                  <div class="col-md-4">
+                    <div class="card mt-4" style="width: 15rem; text-align: justify">
+                      <img src="{% static 'images/stiyaring.jpg'%}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text"><b> Drive</b><br>Explore where ever you want to with your loved ones.</p>
+                      </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4">
+                  <div class="card mt-4" style="width: 15rem; text-align: justify">
+                    <img src="{% static 'images/payment.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text"><b>Payment</b><br>Pay the amount and enjoy the services of the zoom car</p>
+                    </div>
+                  </div>
+              </div>
+            
+              <div class="col-md-4">
+                <div class="card mt-4" style="width: 15rem; text-align: justify">
+                  <img src="{% static 'images/return.jpg'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text"><b>Return</b><br>Return the car to the same location and fill the end checklist to end your trip.</p>
+                  </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </section>
+            
+                <!-- row 2  ends-->
+
+
+                <!-- Footer -->
+<div class="footer mt-5">
+  <footer class="page-footer font-small blue-grey lighten-5">
+    <a  style="text-align: center; color: crimson; text-decoration-color: darkgray; font-size: 150%;" href="http://127.0.0.1:8000/"> (↑)</a>
+    <div></div>
+    <div class="container text-center text-md-left mt-5">
+      <div class="row mt-4 dark-grey-text">
+        <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+          <h6 class="text-uppercase font-weight-bold" style="color: crimson;">ABOUT US</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p style="text-align: justify; color: black;">We are a self-drive car rental agency, with offices in  Kerala. ZOOM CAR Group was founded in 2012. Today, we are dealers for 3 automotive brands with showrooms in Kochi ,Calicut and Wayanad. ZOOM CAR follows the same core values & principles built by the Indus Mottors group. Customer satisfaction is our top-most priority</p>
+         </div>
+        <!-- Grid column1 -->
+        
+        <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links 2-->
+          <h6 class="text-uppercase font-weight-bold" style="color: crimson;">Category</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text text-black" href="#!">Search Car</a>
+          </p>
+          <p>
+            <a class="dark-grey-text text-black" href="#!">Book Car</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold" style="color: crimson;">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p style="color: black;">
+            <i class="fas fa-home mr-3"></i> Zoom Rental Car</p>
+          <p style="color: black;">
+            <i class="fas fa-envelope mr-3"></i> zoom@car.com</p>
+          <p style="color: black;">
+            <i class="fas fa-phone mr-3"></i> +91 234 567 88</p>
+          <p style="color: black;">
+            <i class="fas fa-print mr-3"></i> +91 234 567 89</p>
+        </div>
+      </div>
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2021 Copyright:
+      <a  class="text-black" href="http://127.0.0.1:8000/"> zoom@car.com</a>
+    </div>
+    <!-- Copyright end-->
+    <div class="container pt-2">
+      <div class="row text-center" style="font-size: 2rem;">
+      <div class="col-md-12">
+              <div class="p-3">
+                  <a href= "https://www.facebook.com/"> <i class="fab fa-facebook-square ico "></i></a>
+                  <a href="https://www.instagram.com/"> <i class="fab fa-instagram-square ico"></i></a>
+                  <a href="https://www.twitter.com/"> <i class="fab fa-twitter-square ico"></i></a>
+                  <a href="https://www.youtube.com/"> <i class="fab fa-youtube-square ico"></i></a>
+              </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <!-- Footer end -->
+  <script src="https://kit.fontawesome.com/711d09c28b.js" crossorigin="anonymous"></script>
+                </body>
+                </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

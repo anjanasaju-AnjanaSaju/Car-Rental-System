@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/icon z.png' %}" />
+    <title>ZOOM RENAL CAR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+    <body>
+<!-- header start -->
+        
+    <header class="hd1">
+        <!-- navbar -->
+
+        <style>
+            .hd{
+                        background-image:url( "{% static 'images/h-1.jpeg' %}");
+            }
+        </style>
+
+        
+            <div class="container-flex">
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top  scrolled" id="in-nav">
+                    <img width="50px" src="{% static 'images/icon z.png'%}" alt="images">
+                    <a class="navbar-brand" href="#"><b>ZOOM CAR</b></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">Book Your Car</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">Search Your Car</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'signup' %}">Register</a>
+                              </li>
+                              
+                              
+                              
+                            </ul>
+                        </div>
+                </nav>
+            </div>
+        <!-- <nav ends -->
+            </header>
+
+             <!-- mainbody2 -->
+    <section id="mainbody2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 p-0">
+                    <img id="img2" class="img-fluid" src="{% static 'images/h-6.jpg' %}" />
+                </div>
+
+                <div class="col-md-3 text-center p-5">
+                    <div class="justify-content-center">
+                        <h3 id="hd">WORLD OF CANDY</h3>
+                        <img  src="images/lolli_icon.png" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 p-0">
+                    <img id="img2" class="img-fluid" src="{% static 'images/h-3.jpg' %}" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- mainbody2 end -->
+
+    <!-- mainbody3 -->
+    <section id="mainbody2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 text-center p-5">
+                    <div class="justify-content-center">
+                        <h3 id="hd">WORLD OF CANDY</h3>
+                        <img  src="images/lolli_icon.png" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 p-0">
+                    <img id="img2" class="img-fluid" src="{% static 'images/h-4.jpg' %}" />
+                </div>
+                <div class="col-md-6 p-0">
+                    <img id="img2" class="img-fluid" src="{% static 'images/h-5.jpg' %}" />
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- mainbody3  end-->
+
+     <!-- mainbody4 -->
+     <section id="mainbody2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 p-0">
+                    <img id="img2" class="img-fluid" src="{% static 'images/h-2.jpg' %}" />
+                </div>
+
+                <div class="col-md-3 text-center p-5">
+                    <div class="justify-content-center">
+                        <h3 id="hd">WORLD OF CANDY</h3>
+                        <img  src="images/lolli_icon.png" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 p-0">
+                    <img id="img2" class="img-fluid" src="{% static 'images/h-7.jpg' %}" />
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- mainbody4 end -->
+
+
+     <!-- Footer -->
+<div class="footer">
+    <footer class="page-footer font-small blue-grey lighten-5 ft-1">
+      <a  style="text-align: center; color: crimson; text-decoration-color: darkgray; font-size: 150%;" href="http://127.0.0.1:8000/"> (↑)</a>
+      <div></div>
+      <div class="container text-center text-md-left mt-5">
+        <div class="row mt-4 dark-grey-text">
+          <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+            <h6 class="text-uppercase font-weight-bold" style="color: crimson;">ABOUT US</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p style="text-align: justify; color: black;">We are a self-drive car rental agency, with offices in  Kerala. ZOOM CAR Group was founded in 2012. Today, we are dealers for 3 automotive brands with showrooms in Kochi ,Calicut and Wayanad. ZOOM CAR follows the same core values & principles built by the Indus Mottors group. Customer satisfaction is our top-most priority</p>
+           </div>
+          <!-- Grid column1 -->
+          
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+            <!-- Links 2-->
+            <h6 class="text-uppercase font-weight-bold" style="color: crimson;">Category</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <a class="dark-grey-text text-black" href="#!">Search Car</a>
+            </p>
+            <p>
+              <a class="dark-grey-text text-black" href="#!">Book Car</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+    
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold" style="color: crimson;">Contact</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p style="color: black;">
+              <i class="fas fa-home mr-3"></i> Zoom Rental Car</p>
+            <p style="color: black;">
+              <i class="fas fa-envelope mr-3"></i> zoom@car.com</p>
+            <p style="color: black;">
+              <i class="fas fa-phone mr-3"></i> +91 234 567 88</p>
+            <p style="color: black;">
+              <i class="fas fa-print mr-3"></i> +91 234 567 89</p>
+          </div>
+        </div>
+    
+      </div>
+      <!-- Footer Links -->
+    
+      <!-- Copyright -->
+      <div class="footer-copyright text-center text-black-50 py-3">© 2021 Copyright:
+        <a  class="text-black" href="http://127.0.0.1:8000/"> zoom@car.com</a>
+      </div>
+      <!-- Copyright end-->
+      <div class="container pt-2">
+        <div class="row text-center" style="font-size: 2rem;">
+        <div class="col-md-12">
+                <div class="p-3">
+                    <a href= "https://www.facebook.com/"> <i class="fab fa-facebook-square ico "></i></a>
+                    <a href="https://www.instagram.com/"> <i class="fab fa-instagram-square ico"></i></a>
+                    <a href="https://www.twitter.com/"> <i class="fab fa-twitter-square ico"></i></a>
+                    <a href="https://www.youtube.com/"> <i class="fab fa-youtube-square ico"></i></a>
+                </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+    <!-- Footer end -->
+
+    
+    <script src="https://kit.fontawesome.com/711d09c28b.js" crossorigin="anonymous"></script>
+    
+    </body>
+    </html>
