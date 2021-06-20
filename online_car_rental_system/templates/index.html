@@ -24,7 +24,7 @@
             <div class="container-flex">
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top  scrolled" id="in-nav">
                     <img width="50px" src="{% static 'images/icon z.png'%}" alt="images">
-                    <a class="navbar-brand" href="#"><b>ZOOM CAR</b></a>
+                    <a class="navbar-brand" href="#"><b>ZOOM RENTAL CAR</b></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -40,18 +40,17 @@
                                 <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="{% url 'about' %}">Book Your Car</a>
+                                <a class="nav-link" href="{% url 'customer' %}">Book Your Car</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="{% url 'about' %}">Search Your Car</a>
-                              </li>
-                              <li class="nav-item">
+                              </li><li class="nav-item">
                                 <a class="nav-link" href="{% url 'login' %}">Login</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="{% url 'signup' %}">Register</a>
+                                <a class="nav-link" href="{% url 'reg' %}">Signup</a>
                               </li>
-                              
+                             
                               
                               
                             </ul>
@@ -66,7 +65,7 @@
                           background-image:url( "{% static 'images/h-1.jpeg' %}");
               }
           </style>
-            <h1 class="text-center font-weight-bolder ml-5" style="color: black;"><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>ZOOM RENTAL CAR</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></h1>
+            <h1 class="text-center font-weight-bolder ml-5" style="color: rgb(253, 124, 4);"><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>ZOOM RENTAL CAR</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></h1>
             
         </div>
             </header>
@@ -81,8 +80,7 @@
 
                 <div class="col-md-3 text-center p-5">
                     <div class="justify-content-center">
-                        <h3 id="hd">WORLD OF CANDY</h3>
-                        <img  src="images/lolli_icon.png" />
+                        <h3 id="hd" style="color: rgb(253, 124, 4);"><b>WORLD OF CANDY</b></h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                 </div>
@@ -106,8 +104,7 @@
             </div>
                 <div class="col-md-3 text-center p-5">
                     <div class="justify-content-center">
-                        <h3 id="hd">WORLD OF CANDY</h3>
-                        <img  src="images/lolli_icon.png" />
+                        <h3 id="hd" style="color: rgb(253, 124, 4);"><b>WORLD OF CANDY</b></h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                 </div>
@@ -131,8 +128,7 @@
 
                 <div class="col-md-3 text-center p-5">
                     <div class="justify-content-center">
-                        <h3 id="hd">WORLD OF CANDY</h3>
-                        <img  src="images/lolli_icon.png" />
+                        <h3 id="hd" style="color: rgb(253, 124, 4);"><b>WORLD OF CANDY</b></h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                 </div>
@@ -214,6 +210,11 @@
 
     
     <script src="https://kit.fontawesome.com/711d09c28b.js" crossorigin="anonymous"></script>
-    
+  {%if status %}
+  <script>
+    alert("{{status}}");
+    window.location="/"
+  </script>
+  {% endif %}
     </body>
     </html>

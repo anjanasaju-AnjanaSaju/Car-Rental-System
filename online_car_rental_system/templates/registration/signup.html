@@ -13,7 +13,33 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     
 </head>
-<body>
+<body id="si">
+    <style>
+        #si{
+            margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+        }
+    </style>
+  <script>
+    $(document).ready(function(){
+            $("#passwd2").blur(function(){
+              func();
+            });
+        });
+  function func(){
+    const pass1=document.getElementById("passwd1").value;
+    const pass2=document.getElementById("passwd2").value;
+    if (pass1 != pass2){
+      alert("password and confirm password should be same");
+    }
+    else{
+      if (pass1.length <= 5){
+        alert("password should have minimum 6 elements")
+      }
+    }
+  }
+</script>
      <!-- navbar -->
 
         
@@ -41,13 +67,25 @@
                       <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">Search Your Car</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                      <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: black;">
+                          Login
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'emplogin' %}"><b>Employee Login </b></a>
+                          <a class="dropdown-item" href="{% url 'login' %}"><b>Customer login</b></a>
+                        </div>
                       </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'signup' %}">Register</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: black;">
+                          Registration
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'empsignup' %}"><b>Employee Signup </b></a>
+                          <a class="dropdown-item" href="{% url 'signup' %}"><b>Customet Signup</b></a>
+                        </div>
                       </li>
-                      
+                       -->
                       
                       
                     </ul>
@@ -58,11 +96,11 @@
     <style>
     .space{
         width: 100%;
-        height: 800px;
+        height: 1000px;
         background-image: url( "{% static 'images/signup 1.jpg' %}");
         background-attachment: fixed;
-        background-size: cover;
-        position: fixed;
+        background-size:cover;
+        /* position:fixed; */
     
     }
     </style>
@@ -70,23 +108,26 @@
     <div class="container-fluid">
         <div class="row space justify-content-center pt-5 ">
             <div class="col-md-4">
-                <form action="\accounts\signup\" method="POST" style="border:1px solid black border-spacing=15px">
+                <form action="/accounts/signup/" method="POST" style="border:1px  black border-spacing=15px">
                   {% csrf_token %}
                     <div class="container mt-3">
-                    <label for="first_name"><b>Name</b></label>
-                      <input  type="text" placeholder="Enter Name" name="first_name" required ><br><br>
-                    
+                    <label for="first_name"><b>First Name</b></label>
+                      <input  type="text" placeholder="EnterFirst Name" name="first_name" required ><br><br>
+
+                      <label for="last_name"><b>Last Name</b></label>
+                      <input  type="text" placeholder="Enter Last Name" name="last_name" required ><br><br>
+
                       <label for="username"><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="username" required><br><br>
+                      <input type="text" placeholder="Enter Username" name="username"  required><br><br>
                   
                       <label for="email"><b>Email</b></label>
                       <input type="email" placeholder="Enter Email" name="email" required><br><br>
                   
                       <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+                      <input type="password" placeholder="Enter Password" name="psw" required id="passwd1"><br><br>
                   
                       <label for="psw-repeat"><b>Repeat Password</b></label>
-                      <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br><br>
+                      <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="passwd2"><br><br>
                       
                       <div class="clearfix">
                         <button type="button" class="cancelbtn mr-5 btn btn-info" >Cancel</button>
@@ -97,6 +138,7 @@
             </div>
         </div>
     </div>
+    
 </section>
 </body>
 </html>

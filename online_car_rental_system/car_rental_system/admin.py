@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Employee,Car, Car_Booking
+from .models import Customer, Employee,Car_Booking,IssueCar,Car,Payment,Contact,register_table
 from .models import User
 
 # Register your models here.
@@ -9,7 +9,7 @@ class EmployeeAdmin(admin.ModelAdmin):
 admin.site.register(Employee,EmployeeAdmin)
 
 class CustomerAdmin(admin.ModelAdmin):
-    search_fields=('first_name','booking_date')
+    search_fields=('first_name',)
 admin.site.register(Customer,CustomerAdmin)
 
 class CarAdmin(admin.ModelAdmin):
@@ -17,3 +17,17 @@ class CarAdmin(admin.ModelAdmin):
 admin.site.register(Car,CarAdmin)
 
 admin.site.register(Car_Booking)
+
+class IssueCarAdmin(admin.ModelAdmin):
+    search_fields=('issuedate','returndate')
+admin.site.register(IssueCar,IssueCarAdmin)
+
+class PaymentAdmin(admin.ModelAdmin):
+    search_fields=('payment_status',)
+admin.site.register(Payment,PaymentAdmin)
+
+class ContactAdmin(admin.ModelAdmin):
+    search_fields=('name',)
+admin.site.register(Contact,ContactAdmin)
+
+admin.site.register(register_table)
