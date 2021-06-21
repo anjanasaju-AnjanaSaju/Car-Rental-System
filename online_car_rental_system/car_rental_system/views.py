@@ -198,88 +198,8 @@ def contact(request):
 	return render(request,'contact.html')
 
  
-# # Employee	
-# def empsignup(request):
-# 	if request.method=="POST":
-# 		username=request.POST.get('username')
-# 		email=request.POST.get('email')
-# 		psw=request.POST.get('psw')
-# 		repeat_password=request.POST.get('psw-repeat')
-# 		user=User.objects.create_user(username=username,email=email,password=psw)
-# 		user.save()
-# 		print("User Created")
-# 		return redirect('emplogin')
-# 	else:
-# 		return render(request,'registration/empsignup.html')	
-
-# def loginpage(request):
-# 	responseDic={}
-# 	username = request.POST.get('username')
-# 	password = request.POST.get('password')
-# 	user = authenticate(request,username=username,password=password)
-
-# 	print(username,password,user)
-# 	if user is not None:
-# 		login(request,user)
-# 		return render(request,'employee.html')
-# 	else:
-# 		return render(request,'registration/emplogin.html')
-
-# # Customer
-		
-# def signup_view(request):
-# 	if request.method=="POST":
-# 		first_name=request.POST.get('first_name')
-# 		last_name=request.POST.get('last_name')
-# 		username=request.POST.get('username')
-# 		email=request.POST.get('email')
-# 		password=request.POST.get('psw')
-# 		repeat_password=request.POST.get('psw-repeat')
-# 		user=User.objects.create_user(first_name=first_name,last_name=last_name,username=username,email=email,password=password)
-# 		user.save()
-# 		print("User Created")
-# 		return redirect('login')
-# 	else:
-# 		return render(request,'registration/signup.html')
-
-# def login_view(request):
-# 	return render(request,'registration/login.html')
-
-# def ip_data(request):
-# 	responseDic={}
-# 	first_name = request.POST.get('first_name')
-# 	password_1 = request.POST.get('password_1')
-# 	user = authenticate(request,first_name=first_name,password=password_1)
-
-# 	print(first_name,password_1,user)
-# 	if user is not None:
-# 		login(request,user)
-# 		return render(request,'customer.html')
-# 	else:
-# 		return render(request,'blank.html')
 
 
-#Edit Customer
-
-def edit_data(request):
-	prod=Customer.objects.get(user__username=request.user.username)
-	if request.method=="POST":
-		prod.username=request.POST['username']
-		prod.first_name=request.POST['first_name']
-		prod.last_name=request.POST['last_name']
-		prod.address=request.POST['address']
-		prod.gender=request.POST['gender']
-		prod.dob=request.POST['dob']
-		prod.email=request.POST['email']
-		prod.phone_number=request.POST['phone_number']
-		prod.district=request.POST['district']
-		prod.save()
-		# messages.succeess(request,"CAR UPDATED")
-		return render(request,"customer.html")
-			
-	context={'prod':prod}
-	print(prod)
-	return render(request,"edit.html.html",context)
 
 
 #view cust details	
@@ -330,14 +250,23 @@ def user_login(request):
 			if user.is_superuser: 
 				return redirect("/admin")
 			if user.is_staff:
-				return redirect("customer.html")
+				return redirect("employee")
 			if user.is_active:
-				return render(request,"employee.html")
+				return redirect("customer")
 
 
 		else:
 			return render(request,'user_login.html',{"status":"Invalid User Name or Password"})
 
+def viewissue(request):
+	ob=IssueCar.objects.all()
+	return render(request,"issueview.html",{'ob':ob})
+
+def deleteissue(request,id):
+	if request.method =='POST':
+		pi=IssueCar.objects.get(pk=id)
+		pi.deleteissue()
+		return render(request,"employee.html")
 	
                         
 		

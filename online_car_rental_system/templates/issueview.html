@@ -14,26 +14,8 @@
     
 </head>
 <body>
-  <script>
-    $(document).ready(function(){
-            $("#passwd2").blur(function(){
-              func();
-            });
-        });
-  function func(){
-    const pass1=document.getElementById("passwd1").value;
-    const pass2=document.getElementById("passwd2").value;
-    if (pass1 != pass2){
-      alert("password and confirm password should be same");
-    }
-    else{
-      if (pass1.length <= 5){
-        alert("password should have minimum 6 elements")
-      }
-    }
-  }
-</script>
-     <!-- navbar -->
+    
+    <!-- navbar -->
 
         
       <!-- navbar -->
@@ -59,7 +41,7 @@
                         </a>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="{% url 'addcar' %}"><b>Add Car</b></a>
-                          <a class="dropdown-item" href=""><b>View Car</b></a>
+                          <a class="dropdown-item" href="{% url 'viewcar' %}"><b>View Car</b></a>
                         </div>
                       </li>
                       
@@ -84,72 +66,73 @@
       
       
                       <li class="nav-item">
-                        <a class="nav-link" href="" style="color: black;"><b>Logout</b></a>
+                        <a class="nav-link" href="{% url 'login' %}" style="color: black;"><b>Logout</b></a>
                       </li>
                     </ul>
                   </div>
                   
               </nav>
-              </div>
+              </div><br><br><br><br>
             
 <!-- <nav ends -->
-   
-<section id="signup">
-  <div class="container-fluid">
-      <div class="row space justify-content-center pt-5 ">
-          <div class="col-md-4">
-              <form action="addcar" method="POST" enctype="multipart/form-data" sytle="border:1px solid black border-spacing=15px">
-                {% csrf_token %}
-                  <div class="container mt-3">
-                    <label for="imgs"><b>Image</b></label>
-                    <input  type="file"  name="imgs" required ><br><br>
-                  
-                  <label for="car_name"><b>Car Name</b></label>
-                    <input  type="text"  name="car_name" required ><br><br>
-                  
-                    <label for="company"><b>Car Company</b></label>
-                    <input type="text" name="car_company" required><br><br>
-                
-                    <label for="type"><b>Car Type</b></label>
-                    <input  type="text"  name="car_type" required ><br><br>
-                
-                    <label for="color"><b>Car Color</b></label>
-                    <input  type="text"  name="car_color" required ><br><br>
-                
-                    <label for="capacity"><b>Car Capacity</b></label>
-                    <input  type="text" name="car_capacity" required ><br><br>
-
-                    <label for="number"><b>Car Number</b></label>
-                    <input  type="text" name="car_number" required ><br><br>
-
-                    <label for="fuel"><b>Car Fuel Type</b></label>
-                    <input  type="text" name="car_fuel" required ><br><br>
-
-                    <label for="city"><b>Car City</b></label>
-                    <input  type="text"  name="car_city" required ><br><br>
-
-                    <label for="district"><b>Car District</b></label>
-                    <input  type="text"  name="car_district" required ><br><br>
-
-                    <label for="car_rent_per_day"><b>Car Rent Per Day</b></label>
-                    <input  type="text" name="Car_rent_per_day" required ><br><br>
-
-                    <label for="Status"><b>Car Status</b></label>
-                    <input  type="text"  name="Status" required ><br><br>
+    <section id="signup">
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col-md-4 mt-5">
+                    <table class="table table-striped table-light">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Capacity</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">Fuel</th>
+                            <th scope="col">City</th>
+                            <th scope="col">District</th>
+                            <th scope="col">Rent/Day</th>
+                            <th scope="col">Issue Date</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in ob %}
+                          <tr>
+                              <th scope="row">{{i.id}}</th>
+                            <td>{{ob.car_name}}</td>
+                            <td>{{ob.car_company}}</td>
+                            <td>{{ob.car_type}}</td>
+                            <td>{{ob.car_color}}</td>
+                            <td>{{ob.car_capacity}}</td>
+                            <td>{{ob.car_number}}</td>
+                            <td>{{ob.car_fuel}}</td>
+                            <td>{{ob.car_city}}</td>
+                            <td>{{ob.car_district}}</td>
+                            <td>{{ob.Car_rent_per_day}}</td>
+                            <td>{{ob.issuedate }}</td>
+                            <td>{{ob.retuendate }}</td>
+                            <td>
+                                
+                                <form action="{% url 'delete_data' i.id %}" method="POST" class="d-inline">
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-danger" value="Delete">
                     
-                    <div class="clearfix">
-                      <button type="submit" class="signupbtn btn btn-info btn-block" style="float:center;">Add</button>
+                                </form>
+                               </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                        
                     </div>
-                  </div>
-                </form>
-          </div>
-      </div>
-  </div>
-</section>
+                    </div>
+                    </div>
+                    </section>
+    
 
-
-
-  
-  <script src="https://kit.fontawesome.com/711d09c28b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/711d09c28b.js" crossorigin="anonymous"></script>
 </body>
 </html>
